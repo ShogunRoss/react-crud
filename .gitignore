@@ -25,3 +25,4 @@ yarn-error.log*
 
 #database
 mongo-database
+data/db
