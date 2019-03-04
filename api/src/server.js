@@ -7,8 +7,10 @@ const mongoose = require('mongoose');
 const config = require('./DB.js');
 const businessRoute = require('./business.route');
 
+require('dotenv').config();
+
 mongoose.Promise = global.Promise;
-mongoose.connect(config.DB, { useNewUrlParser: true }).then(() => {
+mongoose.connect(process.env.DB, { useNewUrlParser: true }).then(() => {
   console.log('Database is connected')
 }, err => {
     console.log("Can not connect to the database" + err);
